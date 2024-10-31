@@ -120,3 +120,30 @@ console.log((dateNow-birthday) / 1000 / 60 / 60 / 24 / 365.25);
 console.log(dateNow.getFullYear());
 console.log(dateNow.getFullYear());
 console.log(dateNow.getFullYear() - birthday.getFullYear());
+
+// String
+
+function isPalindrome(text) {
+  const original = text.replaceAll(" ", "").toLocaleLowerCase();
+
+  const reverse = original.split("").reverse().join("");
+
+  return original == reverse;
+}
+
+console.log(isPalindrome("A torre da derrota"))
+console.log(isPalindrome("Level"))
+
+console.log("Madam", "Radar", "Level", "Refer", "Ana");
+
+// Numbers
+console.log("121" , "12321");
+
+
+const newYear = new Date("2025-01-01 00:00:00");
+const today = new Date();
+const daysToNewYear = newYear - today;
+console.log(Math.floor(daysToNewYear / 1000 / 60 / 60/ 24));
+
+
+
