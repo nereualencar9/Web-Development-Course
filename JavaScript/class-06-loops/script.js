@@ -21,6 +21,7 @@ const students = [
   { name: "Pelé", n1: 7, n2: 8 },
   { name: "Vinicius Jr", n1: 8, n2: 6 },
   { name: "Mané Garrincha", n1: 5, n2: 6 },
+  { name: "Kross", n1: 9.1, n2: 10 },
 ];
 
 for (let i = 0; i < students.length; i++) {
@@ -34,3 +35,18 @@ for (let i = 0; i < students.length; i++) {
 }
 
 console.log("End!");
+
+const numbers = [];
+
+while (numbers.length < 6) {
+  const draw = Math.ceil(Math.random() * 60);
+  const numberFormatted = String(draw).padStart(2, 0);
+
+  if (numbers.includes(numberFormatted)) {
+    continue;
+  } else {
+    numbers.push(numberFormatted);
+  }
+}
+
+console.log(numbers.sort((a, b) => a - b).join("-"));
