@@ -15,3 +15,41 @@ console.log(newSalaries);
 
 console.log(devs);
 
+ // filter (inmutable) *
+
+const devFiltered = devs.filter((dev) => dev.salary > 6000);
+console.log(devFiltered);
+
+const resp = prompt("Digite o nome: ").toLocaleLowerCase();
+const resultFilter = devs.filter((dev) => dev.name.toLocaleLowerCase().includes(resp));
+
+console.log(resultFilter);
+
+// sort 
+
+const numbers2 = [33, 1, 3, "Zebra", "a", "A", 6, 2, 11, "Emanuel", "emanuel", "Antõnio"];
+
+console.log(numbers2);
+numbers2.sort();
+numbers2.sort((a, b) => a - b);
+
+console.log(numbers2);
+
+numbers2.sort((a, b) => {
+    if (typeof a == "string" && typeof b == "string") {
+        a = String(a).toLocaleLowerCase();
+        b = String(b).toLocaleLowerCase();
+    }
+  
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+});
+
+console.log(numbers2);
+
+// reduce
+
+const expenses = [20, 32, 38, 220, 50, 100];
+const total = expenses.reduce((a, b) => a + b, 1000);
+console.log(total);
