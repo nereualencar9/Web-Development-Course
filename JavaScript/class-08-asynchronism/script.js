@@ -28,10 +28,11 @@ fetch(urlAPI + "/users")
 
 console.log("Final");
 
-for (let  = 0 ,< 2000000; i++) {
+for (let i = 0; i < 2000000; i++) {
     console.log(i);
 }
 
 setTimeout(() => {
-    console.log("Timeout");
+    console.log("Timeout!");
 }, 1000);
+
