@@ -1,5 +1,5 @@
-const title = document.querySelector(".box");
-const box = document.querySelector("h1");
+const box = document.querySelector(".box");
+const title = document.querySelector("h1");
 const calculator = document.querySelector(".calculator");
 console.log(title.innerHTML);
 
@@ -38,4 +38,13 @@ function basic() {
 title.addEventListener("mouseenter", () => {
     console.log("Title");
 })
+
+const myInput = document.querySelector("input");
+console.log(myInput);
+
+myInput.addEventListener("keyup", () => {
+  console.log(myInput);
+  
+})
+
 
