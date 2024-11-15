@@ -11,6 +11,8 @@ class Control {
 
     power() {
         this.isOn = !this.isOn;
+
+        const sound = new Audio
         return "Plin!";
     }
 
@@ -28,6 +30,7 @@ dow() {
     return this.temp;
 }
 }
+
 control(17);
 const control1 = new Control(17, "Branco");
 const control2 = new Control(20, "Preto");
@@ -41,6 +44,19 @@ console.log(control1.power());
 console.log(control1.isOn);
 console.log(control1.upper());
 console.log(control1.upper());
+
+const powerButton = document.querySelector(".power");
+const upButton = document.querySelector(".up");
+const downBuuton = document.querySelector(".down");
+const displayValue = document.querySelector(".display");
+
+const airButton = new Control(17, Cinza);
+powerButton.addEventListener("click", () => {
+    airButton.power();
+    displayValue.innerHTML = airButton.isOn ? `&{airButton.temp}`°c, ""
+});
+
+    
 
 
 
