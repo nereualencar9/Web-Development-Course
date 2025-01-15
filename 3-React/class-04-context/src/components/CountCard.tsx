@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ValueContext } from "../contexts/ValueContext";
 
 export function CountCard() {
-  const value = useContext(ValueContext);
+  const { value } = useContext(ValueContext);
 
   return (
     <>
